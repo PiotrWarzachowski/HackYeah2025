@@ -6,43 +6,60 @@ A comprehensive health and fitness tracking application built with React Native 
 
 ---
 
+## 📚 Quick Navigation
+
+- 🚀 **New here?** Start with [QUICK_START.md](./QUICK_START.md) (5 minutes)
+- 📱 **QR code issues?** Check [QR_CODE_GUIDE.md](./QR_CODE_GUIDE.md) (visual guide)
+- ⚡ **Need quick reference?** See [CHEAT_SHEET.md](./CHEAT_SHEET.md) (one page)
+- 📖 **Want full details?** Keep reading this README (comprehensive)
+- 🗂️ **Looking for something specific?** See [DOCS_INDEX.md](./DOCS_INDEX.md)
+
+---
+
 ## 📱 Features
 
 ### 🔥 Health Tracking
+
 - **Health Score System** - Uncapped scoring system with gaming-inspired levels
 - **Daily Streak Tracking** - Build consistency with fire streak counter
 - **Recovery Impact Analysis** - Track what helps and hurts your recovery
 - **Interactive Charts** - Swipeable, tappable charts with real-time data visualization
 
 ### 📊 Stats & Analytics
+
 - **Detailed Metrics** - Heart rate, sleep quality, HRV, stress levels, and more
 - **24-Hour Charts** - Tap any metric to see hourly breakdown with Y-axis data
 - **Progress Tracking** - Monitor improvements over time
 
 ### 📝 Daily Journal
+
 - **Customizable Questions** - Add/remove questions from your daily check-in
 - **Category Organization** - Circadian Health, Sleep, Nutrition, Fitness, Wellness
 - **Searchable Database** - Find specific questions quickly
 - **Yes/No Format** - Simple, fast daily completion
 
 ### 🧪 AI-Powered Experiments
+
 - **Personalized Predictions** - AI suggests experiments based on similar users
 - **Confidence Ratings** - See how likely each experiment is to work for you
 - **Progress Tracking** - Monitor experiment status (not started, in progress, completed)
 - **Impact Analysis** - View positive/negative results after completion
 
 ### 👥 Social Features
+
 - **Following System** - Connect with friends and see their progress
 - **Profile Views** - Check out other users' stats, streaks, and trophies
 - **Social Feed** - See likes, comments, and encouragement from the community
 - **Share Profiles** - Share your fitness journey to other apps
 
 ### 🎖️ Achievements
+
 - **Trophy System** - Earn trophies for milestones (runs, workouts, journals)
 - **Visual Progress** - Shield-shaped trophies with custom icons
 - **Status Levels** - Elite, Advanced, Intermediate, Beginner, Starting
 
 ### 🔗 Integrations
+
 - **Garmin Connect** - SSO login with OAuth 1.0a (mock mode for development)
 - **Real-time Sync** - Connect with Garmin devices for automatic data import
 
@@ -122,12 +139,14 @@ npx expo start
 #### Step 2: Scan the QR Code
 
 **On iOS:**
+
 1. Open the **Expo Go** app (NOT the native Camera app)
 2. Tap **"Scan QR Code"** at the bottom
 3. Scan the QR code displayed in your terminal or browser
 4. The app will load automatically
 
 **On Android:**
+
 1. Open the **Expo Go** app
 2. Tap **"Scan QR Code"**
 3. Scan the QR code displayed in your terminal or browser
@@ -168,6 +187,7 @@ npx expo start --ios
 ```
 
 **Requirements:**
+
 - Xcode must be installed
 - iOS Simulator must be available
 - Command line tools must be configured
@@ -185,6 +205,7 @@ npx expo start --android
 ```
 
 **Requirements:**
+
 - Android Studio must be installed
 - Android emulator must be running
 - SDK tools must be configured
@@ -202,6 +223,7 @@ npx expo start --android
 ### ❌ "Cannot connect to Metro bundler"
 
 **Solutions:**
+
 1. Ensure your phone and computer are on the **same WiFi network**
 2. Try tunnel mode: `npx expo start --tunnel`
 3. Restart the Metro bundler: Press `R` in the terminal
@@ -214,6 +236,7 @@ npx expo start --android
 **Error:** "This project requires Expo SDK version X but you have Y"
 
 **Solution:**
+
 ```bash
 # Update Expo Go app on your phone to the latest version
 # Then update your project dependencies
@@ -225,6 +248,7 @@ npx expo install --fix
 ### ❌ "babel-preset-expo cannot find module"
 
 **Solution:**
+
 ```bash
 npm install --save-dev babel-preset-expo
 ```
@@ -234,6 +258,7 @@ npm install --save-dev babel-preset-expo
 ### ❌ "Invariant Violation: PlatformConstants could not be found"
 
 **Solution:**
+
 ```bash
 npx expo install expo-modules-core
 npm install --legacy-peer-deps
@@ -244,6 +269,7 @@ npm install --legacy-peer-deps
 ### ❌ Xcode Command Line Tools Not Configured
 
 **Solution:**
+
 ```bash
 sudo xcode-select --reset
 xcode-select --install
@@ -254,6 +280,7 @@ xcode-select --install
 ### ❌ "Cannot read property 'x' of undefined" When Clicking Charts
 
 **This has been fixed!** The app now handles loading states properly. If you still see this:
+
 1. Pull down to refresh the screen
 2. Restart the Expo app
 3. Clear cache: `npx expo start --clear`
@@ -307,27 +334,32 @@ hackathon-rn/
 ## 🎨 Tech Stack
 
 ### Core
+
 - **React Native** `0.81.4` - Mobile framework
 - **Expo** `^54.0.0` - Development platform
 - **TypeScript** `^5.3.0` - Type safety
 - **React** `19.1.0` - UI library
 
 ### Navigation
+
 - **React Navigation** `^7.0.13` - Navigation framework
 - **Bottom Tabs** `^7.2.1` - Tab navigation
 - **Native Stack** `^7.1.7` - Stack navigation
 
 ### UI & Graphics
+
 - **react-native-svg** `15.8.0` - SVG rendering
 - **react-native-safe-area-context** `~5.6.0` - Safe area handling
 - **react-native-screens** `~4.6.0` - Native screen optimization
 
 ### Authentication
+
 - **expo-auth-session** `^7.0.8` - OAuth flows
 - **expo-crypto** `^15.0.7` - Cryptographic functions
 - **expo-web-browser** `^15.0.8` - In-app browser for auth
 
 ### Build Tools
+
 - **Babel** `^7.25.0` - JavaScript compiler
 - **babel-preset-expo** `~12.0.1` - Expo Babel preset
 
@@ -366,19 +398,21 @@ Bottom Tab Navigator
 The app uses **Garmin Connect OAuth 1.0a** for authentication. Currently in **mock mode** for development.
 
 **To enable real Garmin authentication:**
+
 1. Register your app at [Garmin Connect Developer Portal](https://developer.garmin.com/)
 2. Obtain Client ID and Client Secret
 3. Update `src/services/garminOAuth.ts`:
    ```typescript
    const GARMIN_CONFIG = {
-       clientId: 'YOUR_ACTUAL_CLIENT_ID',
-       clientSecret: 'YOUR_ACTUAL_CLIENT_SECRET',
-       // ... rest of config
+     clientId: "YOUR_ACTUAL_CLIENT_ID",
+     clientSecret: "YOUR_ACTUAL_CLIENT_SECRET",
+     // ... rest of config
    };
    ```
 4. Configure redirect URI in `app.json` to match Garmin settings
 
 **Current mock mode behavior:**
+
 - Simulates successful authentication after 1.5s delay
 - No real credentials required for testing
 - Perfect for development and demonstrations
@@ -407,6 +441,7 @@ The app generates **random data on each launch** for demonstration purposes:
 ## 🎨 Design System
 
 ### Colors
+
 - **Primary Green:** `#7EE3A0` - Brand color, used throughout
 - **Background:** `#000000` - Pure black
 - **Cards:** `#0a0a0a` - Slightly lighter black
@@ -418,12 +453,14 @@ The app generates **random data on each launch** for demonstration purposes:
 - **Danger:** `#FF6B6B` - Red (negative impacts)
 
 ### Typography
+
 - **Headers:** Bold, 24-32px
 - **Body:** Regular, 14-16px
 - **Captions:** Regular, 12-14px
 - **Font:** System default (San Francisco on iOS, Roboto on Android)
 
 ### Spacing
+
 - **Base unit:** 4px
 - **Small:** 8px
 - **Medium:** 16px
@@ -488,12 +525,14 @@ eas build --platform android
 ## 🔄 State Management
 
 ### Journal Questions
+
 - **Service:** `src/services/journalService.ts`
 - **State:** Shared across Journal and Journal Customize screens
 - **Persistence:** In-memory (resets on app restart)
 - **To persist:** Integrate with `AsyncStorage` or backend API
 
 ### Authentication State
+
 - **Location:** `App.tsx` root component
 - **State:** `isAuthenticated` boolean
 - **Logout:** Clears state and navigates to login screen
@@ -510,9 +549,10 @@ eas build --platform android
 
 ## 🤝 Contributing
 
-This is a hackathon project built for **HackYeah 2025**. 
+This is a hackathon project built for **HackYeah 2025**.
 
 If you'd like to contribute:
+
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
@@ -547,6 +587,7 @@ This project is private and built for HackYeah 2025 hackathon.
 ## 📞 Support
 
 For issues or questions:
+
 1. Check the **Troubleshooting** section above
 2. Clear cache: `npx expo start --clear`
 3. Reinstall dependencies: `rm -rf node_modules && npm install`
@@ -557,6 +598,7 @@ For issues or questions:
 ## 🎉 Acknowledgments
 
 Built with:
+
 - **Expo** - Amazing development platform
 - **React Navigation** - Smooth navigation
 - **react-native-svg** - Beautiful vector graphics
@@ -566,7 +608,7 @@ Built with:
 
 ## 📸 Screenshots
 
-*Add screenshots of your app here once you've built it!*
+_Add screenshots of your app here once you've built it!_
 
 ---
 
